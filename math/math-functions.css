@@ -1,0 +1,100 @@
+.calc-example {
+  width: calc(100% - 2rem);
+  height: calc(50vh - 80px);
+  margin: calc(1em + 5px);
+  font-size: calc(1rem * 1.25);
+  padding: calc(var(--spacing) * 2);
+}
+
+.min-example {
+  width: min(50%, 400px);
+  font-size: min(5vw, 2rem);
+  padding: min(20px, 3%);
+}
+
+.max-example {
+  width: max(300px, 50%);
+  font-size: max(1rem, 2.5vw);
+  min-height: max(200px, 30vh);
+}
+
+.clamp-example {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  width: clamp(300px, 50%, 700px);
+  padding: clamp(0.5rem, 2%, 1.5rem);
+  line-height: clamp(1.2, 1.5, 1.8);
+}
+
+.sin-example {
+  transform: translateX(calc(100px * sin(30deg)));
+}
+
+.cos-example {
+  transform: translateY(calc(100px * cos(60deg)));
+}
+
+.tan-example {
+  --skew: calc(tan(20deg) * 100px);
+}
+
+.asin-example {
+  --angle: asin(0.5);
+}
+
+.acos-example {
+  --angle: acos(0.5);
+}
+
+.atan-example {
+  --angle: atan(1);
+}
+
+.atan2-example {
+  --angle: atan2(1, 1);
+}
+
+.pow-example {
+  --value: pow(2, 10);       
+  --scale: calc(pow(1.2, 3) * 1px);
+}
+
+.sqrt-example {
+  --root: sqrt(16);          
+  width: calc(sqrt(144) * 1px);
+}
+
+.hypot-example {
+  --hyp: hypot(3, 4);        
+}
+
+.log-example {
+  --natural: log(2.718);     
+  --log10: log(100, 10);     
+}
+
+.exp-example {
+  --e-squared: exp(2);       
+}
+
+.abs-example {
+  margin: abs(-20px);        
+}
+
+.sign-example {
+  --s: sign(-5px);           
+}
+
+.round-example {
+  width: round(nearest, 15px, 10px);  
+  height: round(up, 15px, 10px);      
+  padding: round(down, 15px, 10px);   
+  margin: round(to-zero, 15px, 10px); 
+}
+
+.mod-example {
+  --remainder: mod(7, 3);    
+}
+
+.rem-example {
+  --r: rem(-7, 3);           
+}

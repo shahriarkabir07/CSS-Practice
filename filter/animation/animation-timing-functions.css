@@ -1,0 +1,94 @@
+.cubic-bezier-examples {
+  
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);    
+  transition-timing-function: cubic-bezier(0, 0, 1, 1);              
+  transition-timing-function: cubic-bezier(0.42, 0, 1, 1);           
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);           
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);        
+
+  
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);    
+  transition-timing-function: cubic-bezier(0.87, -0.41, 0.19, 1.44); 
+  transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);       
+}
+
+.steps-examples {
+  
+  transition-timing-function: steps(4);
+
+  
+  animation-timing-function: steps(8, end);
+
+  
+  animation-timing-function: steps(5, jump-start);
+
+  
+  animation-timing-function: steps(3, jump-none);
+
+  
+  animation-timing-function: steps(3, jump-both);
+}
+
+.sprite {
+  width: 64px;
+  height: 64px;
+  background-image: url("sprite.png");
+  animation: walk 0.6s steps(8) infinite;
+}
+
+@keyframes walk {
+  from { background-position: 0 0; }
+  to   { background-position: -512px 0; }
+}
+
+.linear-examples {
+  
+  transition-timing-function: linear(0, 1);
+
+  
+  transition-timing-function: linear(
+    0, 0.5, 1.2, 0.9, 1.05, 0.98, 1
+  );
+
+  
+  transition-timing-function: linear(
+    0 0%, 0.8 40%, 1.2 70%, 0.95 85%, 1 100%
+  );
+
+  
+  transition-timing-function: linear(
+    0 0%, 0.01 10%, 0.1 30%, 0.37 55%, 0.7 75%, 1 100%
+  );
+}
+
+.transition-example {
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+              opacity 0.2s steps(3, end);
+}
+
+.transition-example:hover {
+  transform: translateY(-4px);
+  opacity: 0.9;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+.bounce-animation {
+  animation: bounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to   { width: 24ch; }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 24ch;
+  animation: typewriter 2s steps(24) 1s both;
+}

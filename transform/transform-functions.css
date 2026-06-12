@@ -1,0 +1,92 @@
+.translate-example {
+  transform: translate(50px, 100px);
+}
+
+.translateX-example {
+  transform: translateX(50px);
+}
+
+.translateY-example {
+  transform: translateY(100px);
+}
+
+.scale-example {
+  transform: scale(1.5, 2);
+}
+
+.scaleX-example {
+  transform: scaleX(1.5);
+}
+
+.scaleY-example {
+  transform: scaleY(2);
+}
+
+.rotate-example {
+  transform: rotate(45deg);
+}
+
+.skew-example {
+  transform: skew(20deg, 10deg);
+}
+
+.skewX-example {
+  transform: skewX(20deg);
+}
+
+.skewY-example {
+  transform: skewY(10deg);
+}
+
+.matrix-example {
+  transform: matrix(1, 0.5, -0.5, 1, 30, 10);
+}
+
+.translate3d-example {
+  transform: translate3d(10px, 20px, 30px);
+}
+
+.translateZ-example {
+  transform: translateZ(50px);
+}
+
+.scale3d-example {
+  transform: scale3d(1.5, 1.5, 1.5);
+}
+
+.scaleZ-example {
+  transform: scaleZ(2);
+}
+
+.rotate3d-example {
+  transform: rotate3d(1, 1, 0, 45deg);
+}
+
+.rotateX-example {
+  transform: rotateX(45deg);
+}
+
+.rotateY-example {
+  transform: rotateY(45deg);
+}
+
+.rotateZ-example {
+  transform: rotateZ(45deg);
+}
+
+.matrix3d-example {
+  transform: matrix3d(
+    1, 0, 0, 0,
+    0, 1, 0, 0,
+    0, 0, 1, 0,
+    0, 0, 0, 1
+  );
+}
+
+.perspective-example {
+  transform: perspective(500px) rotateY(30deg);
+}
+
+.chained-example {
+  transform: translateX(50px) rotate(45deg) scale(1.2);
+}

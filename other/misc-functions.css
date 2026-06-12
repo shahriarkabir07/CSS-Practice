@@ -1,0 +1,143 @@
+:is(h1, h2, h3, h4) {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+:is(article, section, aside) p {
+  color: #333;
+  max-width: 65ch;
+}
+
+:where(button, input, select, textarea) {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.card:is(:hover, :focus-within) {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+li:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+input:not([type="submit"]):not([type="reset"]) {
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+p:not(.intro, .outro) {
+  text-indent: 1.5em;
+}
+
+label:has(input:checked) {
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+.card:has(img) {
+  padding: 0;
+}
+
+form:has(input:invalid) .submit-btn {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+tr:nth-child(odd) {
+  background-color: #f9fafb;
+}
+
+li:nth-child(3n) {
+  font-weight: bold;
+}
+
+li:nth-child(-n+4) {
+  color: #ef4444;
+}
+
+li:nth-child(n+3) {
+  opacity: 0.6;
+}
+
+body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section;
+  content: counter(section) ". ";
+}
+
+ol {
+  counter-reset: item;
+}
+
+ol li {
+  counter-increment: item;
+}
+
+ol li::before {
+  content: counters(item, ".") " ";
+}
+
+ol.roman li::before {
+  content: counter(item, upper-roman) ". ";
+}
+
+.custom-list {
+  list-style: symbols(cyclic "▲" "●" "■");
+}
+
+.image-function-example {
+  background-image: image("photo.jpg", #bbb);      
+  background-image: image(ltr "arrow-right.png");   
+  background-image: image(rtl "arrow-left.png");
+}
+
+.image-set-example {
+  background-image: image-set(
+    url("photo.avif") type("image/avif"),
+    url("photo.webp") type("image/webp"),
+    url("photo.jpg")  type("image/jpeg")
+  );
+
+  
+  background-image: image-set(
+    url("logo-1x.png") 1x,
+    url("logo-2x.png") 2x,
+    url("logo-3x.png") 3x
+  );
+}
+
+.cross-fade-example {
+  background-image: cross-fade(
+    url("image1.jpg") 30%,
+    url("image2.jpg") 70%
+  );
+
+  
+  background-image: cross-fade(
+    url("a.jpg") 33.33%,
+    url("b.jpg") 33.33%,
+    url("c.jpg") 33.33%
+  );
+}
+
+.element-example {
+  background: element(#source-element);  
+}
+
+@layer base, components, utilities;
+
+@layer base {
+  p { color: #333; }
+}
+
+@layer utilities {
+  .text-red { color: red; }
+}
+
+.override {
+  color: revert-layer;
+}

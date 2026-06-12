@@ -1,0 +1,108 @@
+.linear-basic {
+  background: linear-gradient(to right, red, blue);
+}
+
+.linear-angle {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.linear-multicolor {
+  background: linear-gradient(to right, red, orange, yellow, green, blue, violet);
+}
+
+.linear-with-stops {
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #333333 40%,
+    #666666 70%,
+    #ffffff 100%
+  );
+}
+
+.linear-hard-stop {
+  background: linear-gradient(to right, red 50%, blue 50%);
+}
+
+.repeating-linear {
+  background: repeating-linear-gradient(
+    45deg,
+    #000 0px,
+    #000 10px,
+    #fff 10px,
+    #fff 20px
+  );
+}
+
+.radial-basic {
+  background: radial-gradient(circle, #f5f7fa, #c3cfe2);
+}
+
+.radial-ellipse {
+  background: radial-gradient(ellipse at center, #a1c4fd, #c2e9fb);
+}
+
+.radial-positioned {
+  background: radial-gradient(circle at 30% 70%, #f093fb, #f5576c);
+}
+
+.radial-sized {
+  background: radial-gradient(closest-side circle at 50% 50%, yellow, transparent);
+  
+}
+
+.radial-multicolor {
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 50%,
+    #ff6e7f 0%,
+    #bfe9ff 50%,
+    #ffffff 100%
+  );
+}
+
+.repeating-radial {
+  background: repeating-radial-gradient(
+    circle,
+    #ff6b6b 0px,
+    #ff6b6b 10px,
+    #ffeaa7 10px,
+    #ffeaa7 20px
+  );
+}
+
+.conic-basic {
+  background: conic-gradient(red, yellow, green, blue, red);
+}
+
+.conic-pie-chart {
+  background: conic-gradient(
+    #e74c3c 0% 30%,
+    #3498db 30% 65%,
+    #2ecc71 65% 100%
+  );
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.conic-angled {
+  background: conic-gradient(from 45deg at 30% 50%, pink, blue, pink);
+}
+
+.conic-checkerboard {
+  background: conic-gradient(#fff 90deg, #000 90deg 180deg, #fff 180deg 270deg, #000 270deg);
+  background-size: 40px 40px;
+}
+
+.repeating-conic {
+  background: repeating-conic-gradient(
+    #e0e0e0 0deg 10deg,
+    #ffffff 10deg 20deg
+  );
+}
+
+.multi-gradient {
+  background:
+    linear-gradient(rgba(255,255,255,0.8) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
